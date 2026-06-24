@@ -7,7 +7,7 @@ import { SectionTitle } from '@/components/common/SectionTitle';
 import { TESTIMONIALS } from '@/constants';
 import { generateAvatarColor } from '@/lib/utils';
 
-export function TestimonialsSection(): JSX.Element {
+export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
@@ -55,7 +55,7 @@ interface TestimonialCardProps {
   index: number;
 }
 
-function TestimonialCard({ testimonial }: TestimonialCardProps): JSX.Element {
+function TestimonialCard({ testimonial }: TestimonialCardProps) {
   const avatarColor = generateAvatarColor(testimonial.name);
 
   return (
@@ -64,7 +64,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps): JSX.Element {
       aria-label={`Testimoni dari ${testimonial.name}`}
     >
       {/* Quote Icon */}
-      <Quote className="h-6 w-6 text-indigo-300 dark:text-indigo-600 mb-4 flex-shrink-0" aria-hidden="true" />
+      <Quote className="h-6 w-6 text-teal-300 dark:text-teal-600 mb-4 flex-shrink-0" aria-hidden="true" />
 
       {/* Stars */}
       <div className="flex gap-0.5 mb-3" aria-label={`Rating ${testimonial.rating} dari 5 bintang`}>

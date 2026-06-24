@@ -10,8 +10,8 @@ const SCREENS = [
     id: 'dashboard',
     label: 'Dashboard',
     emoji: '📊',
-    bgFrom: 'from-indigo-600',
-    bgTo: 'to-violet-700',
+    bgFrom: 'from-teal-600',
+    bgTo: 'to-emerald-700',
     content: {
       title: 'Dashboard Utama',
       subtitle: 'Semua informasi keuangan dalam satu tampilan',
@@ -68,7 +68,7 @@ const SCREENS = [
   },
 ];
 
-export function AppMockupSection(): JSX.Element {
+export function AppMockupSection() {
   const [activeScreen, setActiveScreen] = useState<string>('dashboard');
   const screen = SCREENS.find((s) => s.id === activeScreen) || SCREENS[0];
 
@@ -107,7 +107,7 @@ export function AppMockupSection(): JSX.Element {
                   onClick={() => setActiveScreen(s.id)}
                   className={`flex-1 rounded-xl py-2.5 text-sm font-semibold transition-all duration-200 ${
                     activeScreen === s.id
-                      ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                      ? 'bg-white dark:bg-slate-700 text-teal-600 dark:text-teal-400 shadow-sm'
                       : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
                   }`}
                 >
@@ -142,8 +142,8 @@ export function AppMockupSection(): JSX.Element {
                     'Export data ke PDF & CSV',
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-                      <span className="h-5 w-5 rounded-full bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center flex-shrink-0">
-                        <span className="h-2 w-2 rounded-full bg-indigo-500" />
+                      <span className="h-5 w-5 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center flex-shrink-0">
+                        <span className="h-2 w-2 rounded-full bg-teal-500" />
                       </span>
                       {feature}
                     </li>
@@ -224,7 +224,7 @@ export function AppMockupSection(): JSX.Element {
             </div>
 
             {/* Glow */}
-            <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-indigo-500/20 to-violet-500/20 blur-3xl -z-10 scale-110" aria-hidden="true" />
+            <div className="absolute inset-0 rounded-[48px] bg-gradient-to-b from-teal-500/20 to-emerald-500/20 blur-3xl -z-10 scale-110" aria-hidden="true" />
           </div>
         </div>
       </Container>

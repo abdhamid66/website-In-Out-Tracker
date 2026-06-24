@@ -3,9 +3,9 @@
 @layer base {
   :root {
     --font-inter: 'Inter', sans-serif;
-    --color-primary: #4F46E5;
-    --color-secondary: #6366F1;
-    --color-accent: #22C55E;
+    --color-primary: #0d9488;
+    --color-secondary: #14b8a6;
+    --color-accent: #10b981;
     --color-background: #FFFFFF;
     --color-dark: #0F172A;
     --color-text: #1E293B;
@@ -33,13 +33,13 @@
   }
 
   :focus-visible {
-    outline: 2px solid #4F46E5;
+    outline: 2px solid #0d9488;
     outline-offset: 2px;
   }
 
   ::selection {
-    background-color: #EEF2FF;
-    color: #4F46E5;
+    background-color: #f0fdfa;
+    color: #0d9488;
   }
 
   /* Skip to main content */
@@ -49,7 +49,7 @@
     left: 1rem;
     z-index: 9999;
     padding: 0.5rem 1rem;
-    background: #4F46E5;
+    background: #0d9488;
     color: white;
     border-radius: 0.5rem;
     font-size: 0.875rem;
@@ -92,7 +92,7 @@
 
   /* Gradient Text */
   .gradient-text {
-    background: linear-gradient(135deg, #4F46E5, #7C3AED);
+    background: linear-gradient(135deg, #0d9488, #10b981);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

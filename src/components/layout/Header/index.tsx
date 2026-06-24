@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
@@ -9,7 +10,7 @@ import { MobileMenu } from '@/components/layout/MobileMenu';
 import { NAV_ITEMS, PLAYSTORE_URL } from '@/constants';
 import { cn } from '@/lib/utils';
 
-export function Header(): JSX.Element {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -47,13 +48,14 @@ export function Header(): JSX.Element {
               className="flex items-center gap-2.5 font-bold text-xl text-slate-900 dark:text-white hover:opacity-80 transition-opacity"
               aria-label="In-Out Tracker - Beranda"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/30">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M10 2L14 8H6L10 2Z" fill="white" />
-                  <path d="M10 18L6 12H14L10 18Z" fill="white" opacity="0.7" />
-                </svg>
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 shadow-lg shadow-teal-500/30 overflow-hidden">
+                <img 
+                  src="/ikon-copy.png" 
+                  alt="Logo In-Out Tracker" 
+                  className="h-full w-full object-contain scale-110"
+                />
               </div>
-              <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
                 In-Out
               </span>
               <span>Tracker</span>
@@ -65,7 +67,7 @@ export function Header(): JSX.Element {
                 <li key={item.href}>
                   <button
                     onClick={() => handleNavClick(item.href)}
-                    className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-all duration-200"
+                    className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 dark:text-slate-300 dark:hover:text-teal-400 rounded-xl hover:bg-teal-50 dark:hover:bg-teal-950/30 transition-all duration-200"
                     aria-label={`Navigasi ke ${item.label}`}
                   >
                     {item.label}

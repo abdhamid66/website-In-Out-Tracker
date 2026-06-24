@@ -11,7 +11,7 @@ const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   PlusCircle, MinusCircle, LayoutDashboard, FileBarChart,
 };
 
-export function HowItWorksSection(): JSX.Element {
+export function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
@@ -36,7 +36,7 @@ export function HowItWorksSection(): JSX.Element {
         <div className="mt-16 relative">
           {/* Connection Line (Desktop) */}
           <div
-            className="absolute top-[60px] left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-200 via-violet-300 to-indigo-200 dark:from-indigo-800 dark:via-violet-700 dark:to-indigo-800 hidden lg:block mx-20"
+            className="absolute top-[60px] left-0 right-0 h-0.5 bg-gradient-to-r from-teal-200 via-emerald-300 to-teal-200 dark:from-teal-800 dark:via-emerald-700 dark:to-teal-800 hidden lg:block mx-20"
             aria-hidden="true"
           />
 
@@ -55,11 +55,11 @@ export function HowItWorksSection(): JSX.Element {
                 >
                   {/* Step Number + Icon */}
                   <div className="relative">
-                    <div className="flex h-[120px] w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-700 shadow-2xl shadow-indigo-500/30 relative z-10">
+                    <div className="flex h-[120px] w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-teal-600 to-emerald-700 shadow-2xl shadow-teal-500/30 relative z-10">
                       {Icon && <Icon className="h-10 w-10 text-white" />}
                     </div>
-                    <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-900 border-2 border-indigo-500 shadow-md z-20">
-                      <span className="text-sm font-bold text-indigo-600">{step.step}</span>
+                    <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-900 border-2 border-teal-500 shadow-md z-20">
+                      <span className="text-sm font-bold text-teal-600">{step.step}</span>
                     </div>
                   </div>
 

@@ -8,7 +8,7 @@ import { SectionTitle } from '@/components/common/SectionTitle';
 import { FAQS } from '@/constants';
 import { cn } from '@/lib/utils';
 
-export function FAQSection(): JSX.Element {
+export function FAQSection() {
   const [openId, setOpenId] = useState<string | null>(null);
 
   const toggle = (id: string): void => {
@@ -53,7 +53,7 @@ export function FAQSection(): JSX.Element {
                 className={cn(
                   'rounded-2xl border transition-all duration-200',
                   openId === faq.id
-                    ? 'border-indigo-200 bg-indigo-50/50 dark:border-indigo-700/50 dark:bg-indigo-950/20 shadow-sm'
+                    ? 'border-teal-200 bg-teal-50/50 dark:border-teal-700/50 dark:bg-teal-950/20 shadow-sm'
                     : 'border-slate-100 bg-slate-50/50 dark:border-slate-800 dark:bg-slate-800/30 hover:border-slate-200 dark:hover:border-slate-700'
                 )}
               >
@@ -70,7 +70,7 @@ export function FAQSection(): JSX.Element {
                   <ChevronDown
                     className={cn(
                       'h-5 w-5 flex-shrink-0 text-slate-400 transition-transform duration-300',
-                      openId === faq.id ? 'rotate-180 text-indigo-500' : ''
+                      openId === faq.id ? 'rotate-180 text-teal-500' : ''
                     )}
                     aria-hidden="true"
                   />
@@ -89,12 +89,12 @@ export function FAQSection(): JSX.Element {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-5">
-                        <div className="h-px bg-indigo-100 dark:bg-indigo-800/50 mb-4" aria-hidden="true" />
+                        <div className="h-px bg-teal-100 dark:bg-teal-800/50 mb-4" aria-hidden="true" />
                         <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                           {faq.answer}
                         </p>
                         {faq.category && (
-                          <span className="mt-3 inline-block rounded-full bg-indigo-100 dark:bg-indigo-900/40 px-3 py-0.5 text-xs font-medium text-indigo-600 dark:text-indigo-400">
+                          <span className="mt-3 inline-block rounded-full bg-teal-100 dark:bg-teal-900/40 px-3 py-0.5 text-xs font-medium text-teal-600 dark:text-teal-400">
                             {faq.category}
                           </span>
                         )}
@@ -109,7 +109,7 @@ export function FAQSection(): JSX.Element {
 
         {/* Still have questions? */}
         <motion.div
-          className="mt-10 text-center rounded-3xl bg-gradient-to-r from-indigo-50 to-violet-50 dark:from-indigo-950/30 dark:to-violet-950/30 border border-indigo-100 dark:border-indigo-800/30 p-8"
+          className="mt-10 text-center rounded-3xl bg-gradient-to-r from-teal-50 to-emerald-50 dark:from-teal-950/30 dark:to-emerald-950/30 border border-teal-100 dark:border-teal-800/30 p-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -124,7 +124,7 @@ export function FAQSection(): JSX.Element {
               e.preventDefault();
               document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
+            className="inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
           >
             Hubungi Tim Support Kami →
           </a>

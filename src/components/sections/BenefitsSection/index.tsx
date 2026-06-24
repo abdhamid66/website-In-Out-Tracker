@@ -11,7 +11,7 @@ const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   Shield, Zap, Target, PiggyBank, TrendingUp,
 };
 
-export function BenefitsSection(): JSX.Element {
+export function BenefitsSection() {
   return (
     <section
       id="benefits"
@@ -50,9 +50,9 @@ export function BenefitsSection(): JSX.Element {
                 {/* Visual */}
                 <div className="flex-1 flex justify-center">
                   <div className="relative">
-                    <div className="h-64 w-64 rounded-[40px] bg-gradient-to-br from-indigo-100 to-violet-100 dark:from-indigo-950/50 dark:to-violet-950/50 flex items-center justify-center">
+                    <div className="h-64 w-64 rounded-[40px] bg-gradient-to-br from-teal-100 to-emerald-100 dark:from-teal-950/50 dark:to-emerald-950/50 flex items-center justify-center">
                       {Icon && (
-                        <div className="h-24 w-24 rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-2xl shadow-indigo-500/30">
+                        <div className="h-24 w-24 rounded-3xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center shadow-2xl shadow-teal-500/30">
                           <Icon className="h-12 w-12 text-white" />
                         </div>
                       )}
@@ -60,7 +60,7 @@ export function BenefitsSection(): JSX.Element {
 
                     {/* Highlight Badge */}
                     {benefit.highlight && (
-                      <div className="absolute -top-3 -right-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-indigo-500/30">
+                      <div className="absolute -top-3 -right-3 rounded-2xl bg-gradient-to-r from-teal-600 to-emerald-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-teal-500/30">
                         {benefit.highlight}
                       </div>
                     )}

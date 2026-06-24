@@ -23,7 +23,7 @@ export function SectionTitle({
   titleClassName,
   subtitleClassName,
   children,
-}: SectionTitleProps): JSX.Element {
+}: SectionTitleProps) {
   const alignStyles = {
     left: 'items-start text-left',
     center: 'items-center text-center',
@@ -33,8 +33,8 @@ export function SectionTitle({
   return (
     <div className={cn('flex flex-col gap-4', alignStyles[align], className)}>
       {badge && (
-        <span className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
-          <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
+        <span className="inline-flex items-center gap-2 rounded-full bg-teal-100 px-4 py-1.5 text-sm font-semibold text-teal-700 dark:bg-teal-900/40 dark:text-teal-300">
+          <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
           {badge}
         </span>
       )}

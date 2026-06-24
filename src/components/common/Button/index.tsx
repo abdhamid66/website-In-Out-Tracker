@@ -13,11 +13,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-gradient-to-r from-indigo-600 to-indigo-500 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:from-indigo-500 hover:to-violet-500 active:scale-[0.98]',
+    'bg-gradient-to-r from-teal-600 to-teal-500 text-white shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:from-teal-500 hover:to-emerald-500 active:scale-[0.98]',
   secondary:
     'bg-gradient-to-r from-emerald-500 to-green-500 text-white shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:from-emerald-400 hover:to-green-400 active:scale-[0.98]',
   outline:
-    'border-2 border-indigo-500 text-indigo-600 bg-transparent hover:bg-indigo-50 active:scale-[0.98] dark:text-indigo-400 dark:hover:bg-indigo-950/30',
+    'border-2 border-teal-500 text-teal-600 bg-transparent hover:bg-teal-50 active:scale-[0.98] dark:text-teal-400 dark:hover:bg-teal-950/30',
   ghost:
     'text-slate-600 bg-transparent hover:bg-slate-100 active:scale-[0.98] dark:text-slate-300 dark:hover:bg-slate-800',
 };
@@ -38,11 +38,11 @@ export function Button({
   className,
   disabled,
   ...props
-}: ButtonProps): JSX.Element {
+}: ButtonProps) {
   return (
     <button
       className={cn(
-        'inline-flex items-center justify-center font-semibold transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex items-center justify-center font-semibold transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
         variantStyles[variant],
         sizeStyles[size],
         className

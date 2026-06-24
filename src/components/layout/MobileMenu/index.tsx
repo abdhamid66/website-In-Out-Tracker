@@ -12,7 +12,7 @@ interface MobileMenuProps {
   onNavClick: (href: string) => void;
 }
 
-export function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuProps): JSX.Element {
+export function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -65,7 +65,7 @@ export function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuProps): JS
               <li key={item.href}>
                 <button
                   onClick={() => onNavClick(item.href)}
-                  className="w-full text-left px-4 py-3 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 rounded-xl transition-all duration-200"
+                  className="w-full text-left px-4 py-3 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-950/30 rounded-xl transition-all duration-200"
                 >
                   {item.label}
                 </button>

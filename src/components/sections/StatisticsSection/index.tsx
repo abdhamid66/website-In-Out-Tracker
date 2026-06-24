@@ -16,7 +16,7 @@ interface StatCardProps {
   index: number;
 }
 
-function StatCard({ value, suffix, prefix, label, description, enabled, index }: StatCardProps): JSX.Element {
+function StatCard({ value, suffix, prefix, label, description, enabled, index }: StatCardProps) {
   const count = useCounter({ end: value, duration: 2500, enabled });
 
   return (
@@ -31,7 +31,7 @@ function StatCard({ value, suffix, prefix, label, description, enabled, index }:
       <div className="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
         {prefix && <span>{prefix}</span>}
         {count.toLocaleString('id-ID')}
-        {suffix && <span className="text-indigo-300">{suffix}</span>}
+        {suffix && <span className="text-teal-300">{suffix}</span>}
       </div>
       <div className="mt-1">
         <p className="text-lg font-semibold text-white/90">{label}</p>
@@ -41,7 +41,7 @@ function StatCard({ value, suffix, prefix, label, description, enabled, index }:
   );
 }
 
-export function StatisticsSection(): JSX.Element {
+export function StatisticsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -49,13 +49,13 @@ export function StatisticsSection(): JSX.Element {
     <section
       id="statistics"
       ref={ref}
-      className="py-24 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-indigo-800 to-violet-900"
+      className="py-24 relative overflow-hidden bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900"
       aria-labelledby="statistics-title"
     >
       {/* Background Decoration */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-indigo-400/20 blur-3xl" />
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-emerald-600/20 blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" />
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -73,7 +73,7 @@ export function StatisticsSection(): JSX.Element {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-white/80 mb-4">
-            <span className="h-1.5 w-1.5 rounded-full bg-indigo-300" />
+            <span className="h-1.5 w-1.5 rounded-full bg-teal-300" />
             Statistik Kami
           </span>
           <h2

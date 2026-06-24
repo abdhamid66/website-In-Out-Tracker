@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Twitter, Mail, Github } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { APP_NAME, PLAYSTORE_URL, APK_URL } from '@/constants';
@@ -19,7 +20,6 @@ const FOOTER_LINKS = [
       { label: 'Fitur', href: '#features' },
       { label: 'Screenshot', href: '#screenshots' },
       { label: 'Cara Kerja', href: '#how-it-works' },
-      { label: 'Testimoni', href: '#testimonials' },
     ],
   },
   {
@@ -34,13 +34,13 @@ const FOOTER_LINKS = [
     links: [
       { label: 'FAQ', href: '#faq' },
       { label: 'Hubungi Kami', href: '#contact' },
-      { label: 'Kebijakan Privasi', href: '/privacy', external: false },
+      { label: 'Kebijakan Privasi', href: 'https://www.termsfeed.com/live/87b1bb38-9f3e-4c61-8a4d-46a5db97f9ee', external: true },
       { label: 'Syarat & Ketentuan', href: '/terms', external: false },
     ],
   },
 ];
 
-export function Footer(): JSX.Element {
+export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -56,14 +56,15 @@ export function Footer(): JSX.Element {
                 className="inline-flex items-center gap-2.5 font-bold text-xl text-white hover:opacity-80 transition-opacity"
                 aria-label={`${APP_NAME} - Beranda`}
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M10 2L14 8H6L10 2Z" fill="white" />
-                    <path d="M10 18L6 12H14L10 18Z" fill="white" opacity="0.7" />
-                  </svg>
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 shadow-lg overflow-hidden">
+                  <img 
+                    src="/ikon-copy.png" 
+                    alt="Logo In-Out Tracker" 
+                    className="h-full w-full object-contain scale-110"
+                  />
                 </div>
                 <span>
-                  <span className="text-indigo-400">In-Out</span> Tracker
+                  <span className="text-teal-400">In-Out</span> Tracker
                 </span>
               </Link>
 
@@ -80,7 +81,7 @@ export function Footer(): JSX.Element {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800 text-slate-400 hover:bg-indigo-600 hover:text-white transition-all duration-200"
+                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800 text-slate-400 hover:bg-teal-600 hover:text-white transition-all duration-200"
                     aria-label={`Kunjungi ${label} kami`}
                   >
                     <Icon className="h-4 w-4" />
@@ -104,7 +105,7 @@ export function Footer(): JSX.Element {
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-slate-400 hover:text-indigo-400 transition-colors"
+                            className="text-sm text-slate-400 hover:text-teal-400 transition-colors"
                           >
                             {link.label}
                           </a>
@@ -114,14 +115,14 @@ export function Footer(): JSX.Element {
                               const el = document.querySelector(link.href);
                               el?.scrollIntoView({ behavior: 'smooth' });
                             }}
-                            className="text-sm text-slate-400 hover:text-indigo-400 transition-colors"
+                            className="text-sm text-slate-400 hover:text-teal-400 transition-colors"
                           >
                             {link.label}
                           </button>
                         ) : (
                           <Link
                             href={link.href}
-                            className="text-sm text-slate-400 hover:text-indigo-400 transition-colors"
+                            className="text-sm text-slate-400 hover:text-teal-400 transition-colors"
                           >
                             {link.label}
                           </Link>

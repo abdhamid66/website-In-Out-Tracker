@@ -84,7 +84,7 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}) {
   return (
     <html lang="id" className={inter.variable}>
       <head>
@@ -113,7 +113,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-white selection:bg-indigo-100 selection:text-indigo-900`}>
+      <body className={`${inter.className} antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-white selection:bg-teal-100 selection:text-teal-900`}>
         <Header />
         <main id="main-content" tabIndex={-1}>
           {children}

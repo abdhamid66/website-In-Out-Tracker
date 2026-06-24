@@ -10,7 +10,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Fitur', href: '#features' },
   { label: 'Cara Kerja', href: '#how-it-works' },
   { label: 'Screenshot', href: '#screenshots' },
-  { label: 'Testimoni', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
 ];
 

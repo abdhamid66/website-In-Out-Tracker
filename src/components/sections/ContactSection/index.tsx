@@ -20,7 +20,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export function ContactSection(): JSX.Element {
+export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   const {
@@ -82,13 +82,13 @@ export function ContactSection(): JSX.Element {
                 { icon: MessageSquare, label: 'Respons', value: 'Dalam 24 jam', href: null },
               ].map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-indigo-100 dark:bg-indigo-900/40">
-                    <Icon className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-teal-100 dark:bg-teal-900/40">
+                    <Icon className="h-5 w-5 text-teal-600 dark:text-teal-400" />
                   </div>
                   <div>
                     <p className="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">{label}</p>
                     {href ? (
-                      <a href={href} className="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                      <a href={href} className="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                         {value}
                       </a>
                     ) : (
@@ -134,7 +134,7 @@ export function ContactSection(): JSX.Element {
                           {...register('name')}
                           placeholder="Budi Santoso"
                           className={cn(
-                            'w-full rounded-xl border bg-white dark:bg-slate-800 pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent',
+                            'w-full rounded-xl border bg-white dark:bg-slate-800 pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent',
                             errors.name ? 'border-rose-500' : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'
                           )}
                           aria-invalid={!!errors.name}
@@ -159,7 +159,7 @@ export function ContactSection(): JSX.Element {
                           {...register('email')}
                           placeholder="budi@email.com"
                           className={cn(
-                            'w-full rounded-xl border bg-white dark:bg-slate-800 pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent',
+                            'w-full rounded-xl border bg-white dark:bg-slate-800 pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent',
                             errors.email ? 'border-rose-500' : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'
                           )}
                           aria-invalid={!!errors.email}
@@ -183,7 +183,7 @@ export function ContactSection(): JSX.Element {
                       {...register('subject')}
                       placeholder="Pertanyaan tentang fitur..."
                       className={cn(
-                        'w-full rounded-xl border bg-white dark:bg-slate-800 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent',
+                        'w-full rounded-xl border bg-white dark:bg-slate-800 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent',
                         errors.subject ? 'border-rose-500' : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'
                       )}
                       aria-invalid={!!errors.subject}
@@ -205,7 +205,7 @@ export function ContactSection(): JSX.Element {
                       rows={5}
                       placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."
                       className={cn(
-                        'w-full resize-none rounded-xl border bg-white dark:bg-slate-800 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent',
+                        'w-full resize-none rounded-xl border bg-white dark:bg-slate-800 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent',
                         errors.message ? 'border-rose-500' : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'
                       )}
                       aria-invalid={!!errors.message}

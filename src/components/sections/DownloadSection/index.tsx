@@ -6,7 +6,7 @@ import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
 import { PLAYSTORE_URL, APK_URL } from '@/constants';
 
-export function DownloadSection(): JSX.Element {
+export function DownloadSection() {
   return (
     <section
       id="download"
@@ -14,12 +14,12 @@ export function DownloadSection(): JSX.Element {
       aria-labelledby="download-title"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-violet-600 to-indigo-800" aria-hidden="true">
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-emerald-600 to-teal-800" aria-hidden="true">
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
         }} />
         <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-indigo-300/20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-teal-300/20 blur-3xl" />
       </div>
 
       <Container className="relative">
@@ -75,7 +75,7 @@ export function DownloadSection(): JSX.Element {
               <Button
                 size="lg"
                 onClick={() => window.open(APK_URL, '_blank')}
-                className="bg-white text-indigo-700 hover:bg-indigo-50 shadow-xl shadow-indigo-900/30"
+                className="bg-white text-teal-700 hover:bg-teal-50 shadow-xl shadow-teal-900/30"
                 leftIcon={<Package className="h-5 w-5" />}
                 aria-label="Download file APK In-Out Tracker langsung"
               >
@@ -96,7 +96,7 @@ export function DownloadSection(): JSX.Element {
             <div className="relative flex gap-4 items-end">
               {/* Left Phone (tilted) */}
               <div className="h-[440px] w-[200px] -rotate-6 rounded-[40px] bg-slate-800 p-2.5 shadow-2xl opacity-70 transform translate-y-8 ring-1 ring-slate-700/50">
-                <div className="h-full w-full rounded-[32px] bg-gradient-to-b from-violet-600 to-indigo-700 flex flex-col p-4 overflow-hidden">
+                <div className="h-full w-full rounded-[32px] bg-gradient-to-b from-emerald-600 to-teal-700 flex flex-col p-4 overflow-hidden">
                   <div className="mt-6 space-y-3">
                     {[1,2,3,4].map(i => (
                       <div key={i} className="h-10 rounded-xl bg-white/20" />
@@ -107,7 +107,7 @@ export function DownloadSection(): JSX.Element {
 
               {/* Center Phone (main) */}
               <div className="h-[500px] w-[230px] rounded-[44px] bg-slate-900 p-3 shadow-2xl ring-1 ring-slate-700/50 z-10">
-                <div className="h-full w-full rounded-[36px] bg-gradient-to-b from-indigo-600 to-violet-700 flex flex-col overflow-hidden">
+                <div className="h-full w-full rounded-[36px] bg-gradient-to-b from-teal-600 to-emerald-700 flex flex-col overflow-hidden">
                   <div className="px-5 pt-10 pb-4">
                     <div className="h-4 w-24 rounded-full bg-white/30 mb-2" />
                     <div className="h-8 w-36 rounded-full bg-white/20" />
