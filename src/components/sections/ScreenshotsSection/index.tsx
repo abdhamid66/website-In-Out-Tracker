@@ -66,7 +66,7 @@ export function ScreenshotsSection() {
           {/* Phone Display */}
           <div className="relative flex items-center gap-6">
             {/* Prev Button */}
-            <button
+            <button suppressHydrationWarning
               onClick={prev}
               className="flex h-12 w-12 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-md hover:border-teal-300 hover:shadow-teal-100 dark:hover:border-teal-700 transition-all duration-200 flex-shrink-0"
               aria-label="Screenshot sebelumnya"
@@ -125,7 +125,7 @@ export function ScreenshotsSection() {
             </div>
 
             {/* Next Button */}
-            <button
+            <button suppressHydrationWarning
               onClick={next}
               className="flex h-12 w-12 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-md hover:border-teal-300 hover:shadow-teal-100 dark:hover:border-teal-700 transition-all duration-200 flex-shrink-0"
               aria-label="Screenshot berikutnya"
@@ -156,7 +156,7 @@ export function ScreenshotsSection() {
           {/* Dots */}
           <div className="flex gap-2" role="tablist" aria-label="Navigasi screenshot">
             {SCREENS.map((s, i) => (
-              <button
+              <button suppressHydrationWarning
                 key={s.id}
                 role="tab"
                 aria-selected={i === current}

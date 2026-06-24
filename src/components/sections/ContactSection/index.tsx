@@ -128,7 +128,7 @@ export function ContactSection() {
                       </label>
                       <div className="relative">
                         <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" aria-hidden="true" />
-                        <input
+                        <input suppressHydrationWarning
                           id="contact-name"
                           type="text"
                           {...register('name')}
@@ -153,7 +153,7 @@ export function ContactSection() {
                       </label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" aria-hidden="true" />
-                        <input
+                        <input suppressHydrationWarning
                           id="contact-email"
                           type="email"
                           {...register('email')}
@@ -177,7 +177,7 @@ export function ContactSection() {
                     <label htmlFor="contact-subject" className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       Subjek <span className="text-rose-500" aria-label="wajib diisi">*</span>
                     </label>
-                    <input
+                    <input suppressHydrationWarning
                       id="contact-subject"
                       type="text"
                       {...register('subject')}

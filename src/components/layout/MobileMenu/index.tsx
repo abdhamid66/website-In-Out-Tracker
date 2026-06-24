@@ -49,7 +49,7 @@ export function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuProps) {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 p-5">
           <span className="font-bold text-lg text-slate-900 dark:text-white">Menu</span>
-          <button
+          <button suppressHydrationWarning
             onClick={onClose}
             className="flex h-9 w-9 items-center justify-center rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             aria-label="Tutup menu"
@@ -63,7 +63,7 @@ export function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuProps) {
           <ul className="flex flex-col gap-2">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
-                <button
+                <button suppressHydrationWarning
                   onClick={() => onNavClick(item.href)}
                   className="w-full text-left px-4 py-3 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-950/30 rounded-xl transition-all duration-200"
                 >

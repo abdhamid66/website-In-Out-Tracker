@@ -110,7 +110,7 @@ export function Footer() {
                             {link.label}
                           </a>
                         ) : link.href.startsWith('#') ? (
-                          <button
+                          <button suppressHydrationWarning
                             onClick={() => {
                               const el = document.querySelector(link.href);
                               el?.scrollIntoView({ behavior: 'smooth' });

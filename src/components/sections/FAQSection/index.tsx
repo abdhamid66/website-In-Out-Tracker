@@ -57,7 +57,7 @@ export function FAQSection() {
                     : 'border-slate-100 bg-slate-50/50 dark:border-slate-800 dark:bg-slate-800/30 hover:border-slate-200 dark:hover:border-slate-700'
                 )}
               >
-                <button
+                <button suppressHydrationWarning
                   onClick={() => toggle(faq.id)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   aria-expanded={openId === faq.id}

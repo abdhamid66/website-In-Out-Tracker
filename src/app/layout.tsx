@@ -86,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={inter.variable}>
+    <html lang="id" className={inter.variable} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -113,7 +113,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-white selection:bg-teal-100 selection:text-teal-900`}>
+      <body className={`${inter.className} antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-white selection:bg-teal-100 selection:text-teal-900`} suppressHydrationWarning>
         <Header />
         <main id="main-content" tabIndex={-1}>
           {children}

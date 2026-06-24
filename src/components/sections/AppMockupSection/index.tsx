@@ -99,7 +99,7 @@ export function AppMockupSection() {
             {/* Tabs */}
             <div className="flex gap-2 rounded-2xl bg-slate-100 dark:bg-slate-800 p-1.5" role="tablist" aria-label="Pilih tampilan aplikasi">
               {SCREENS.map((s) => (
-                <button
+                <button suppressHydrationWarning
                   key={s.id}
                   role="tab"
                   aria-selected={activeScreen === s.id}
