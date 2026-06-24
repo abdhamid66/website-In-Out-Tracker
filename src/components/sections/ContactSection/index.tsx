@@ -12,10 +12,10 @@ import { Button } from '@/components/common/Button';
 import { cn } from '@/lib/utils';
 
 const contactSchema = z.object({
-  name: z.string().min(2, 'Nama minimal 2 karakter').max(50, 'Nama maksimal 50 karakter'),
+  name: z.string().min(1, 'Nama wajib diisi').max(50, 'Nama maksimal 50 karakter'),
   email: z.string().email('Format email tidak valid'),
-  subject: z.string().min(5, 'Subjek minimal 5 karakter').max(100, 'Subjek maksimal 100 karakter'),
-  message: z.string().min(20, 'Pesan minimal 20 karakter').max(1000, 'Pesan maksimal 1000 karakter'),
+  subject: z.string().min(1, 'Subjek wajib diisi').max(100, 'Subjek maksimal 100 karakter'),
+  message: z.string().min(1, 'Pesan wajib diisi').max(1000, 'Pesan maksimal 1000 karakter'),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -34,14 +34,35 @@ export function ContactSection() {
 
   const onSubmit = async (data: ContactFormData): Promise<void> => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log('Form submitted:', data);
-      setIsSubmitted(true);
-      reset();
-      setTimeout(() => setIsSubmitted(false), 5000);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          // Access Key Web3Forms
+          access_key: '00608ebd-7b3e-4e51-b6f1-d2f388f06601',
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        reset();
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        console.error('Form submission error:', result);
+        alert('Gagal mengirim pesan. Silakan coba lagi nanti.');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
+      alert('Terjadi kesalahan jaringan.');
     }
   };
 
@@ -78,7 +99,7 @@ export function ContactSection() {
             <div className="flex flex-col gap-6">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Informasi Kontak</h3>
               {[
-                { icon: Mail, label: 'Email', value: 'support@inouttracker.app', href: 'mailto:support@inouttracker.app' },
+                { icon: Mail, label: 'Email', value: 'hamnsxx@gmail.com', href: 'mailto:hamnsxx@gmail.com' },
                 { icon: MessageSquare, label: 'Respons', value: 'Dalam 24 jam', href: null },
               ].map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-start gap-4">

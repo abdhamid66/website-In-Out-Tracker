@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Twitter, Mail, Github } from 'lucide-react';
+import { Instagram, Facebook, Mail, Github } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { APP_NAME, PLAYSTORE_URL, APK_URL } from '@/constants';
 
 const SOCIAL_LINKS = [
-  { icon: Instagram, href: 'https://instagram.com/inouttracker', label: 'Instagram' },
-  { icon: Twitter, href: 'https://twitter.com/inouttracker', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:support@inouttracker.app', label: 'Email' },
-  { icon: Github, href: 'https://github.com/inouttracker', label: 'GitHub' },
+  { icon: Instagram, href: 'https://www.instagram.com/__abdlhmiied5/', label: 'Instagram' },
+  { icon: Facebook, href: 'https://web.facebook.com/sapaah.peih.77?locale=id_ID', label: 'Facebook' },
+  { icon: Mail, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=hamnsxx@gmail.com', label: 'Email' },
+  { icon: Github, href: 'https://github.com/abdhamid66', label: 'GitHub' },
 ];
 
 const FOOTER_LINKS = [
