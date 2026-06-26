@@ -7,6 +7,7 @@ import { Menu } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
 import { MobileMenu } from '@/components/layout/MobileMenu';
+import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { NAV_ITEMS, PLAYSTORE_URL } from '@/constants';
 import { cn } from '@/lib/utils';
 
@@ -78,6 +79,7 @@ export function Header() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-3">
+              <ThemeToggle />
               <Button
                 size="sm"
                 className="hidden sm:inline-flex"
